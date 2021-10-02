@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Skin Cancer Detector</string>
+    <string name="take_a_picture">Take a picture!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="analysis_list_button_text">Lista de analises realizadas</string>
+    <string name="photo_gallery_button_text">Selecionar foto na galeria</string>
+    <string name="itch">Coça</string>
+    <string name="grew">Cresceu</string>
+    <string name="changed">Mudou</string>
+    <string name="hurts">Dói</string>
+    <string name="bleeds">Sangra</string>
+    <string name="elevation">Elevação</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="flash_button">Flash Button</string>
+    <string name="redimensione_a_foto">Redimensione a foto:</string>
+    <string name="selecione_a_regi_o_do_corpo">Selecione a região do corpo:</string>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/permissionsFragment">
+
+    <fragment
+        android:id="@+id/permissionsFragment"
+        android:name="com.example.skincancerdetector.PermissionsFragment"
+        android:label="PermissionsFragment" >
+        <action
+            android:id="@+id/action_permissionsFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.skincancerdetector.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_photoEditFragment"
+            app:destination="@id/photoEditFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_permissionsFragment"
+            app:destination="@id/permissionsFragment"
+            app:popUpTo="@id/permissionsFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="selected_image_from_gallery"
+            app:argType="android.graphics.Bitmap[]" />
+        <argument
+            android:name="image_from_camera"
+            app:argType="android.net.Uri" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoEditFragment"
+        android:name="com.example.skincancerdetector.PhotoEditFragment"
+        android:label="fragment_photo_edit"
+        tools:layout="@layout/fragment_photo_edit" >
+        <action
+            android:id="@+id/action_photoEditFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_photoEditFragment_to_bodyPartFragment"
+            app:destination="@id/bodyPartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bodyPartFragment"
+        android:name="com.example.skincancerdetector.BodyPartFragment"
+        android:label="fragment_body_part"
+        tools:layout="@layout/fragment_body_part" >
+        <action
+            android:id="@+id/action_bodyPartFragment_to_argumentsFragment"
+            app:destination="@id/argumentsFragment" />
+        <action
+            android:id="@+id/action_bodyPartFragment_to_photoEditFragment"
+            app:destination="@id/photoEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/argumentsFragment"
+        android:name="com.example.skincancerdetector.ArgumentsFragment"
+        android:label="fragment_arguments"
+        tools:layout="@layout/fragment_arguments" >
+        <action
+            android:id="@+id/action_argumentsFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_argumentsFragment_to_bodyPartFragment"
+            app:destination="@id/bodyPartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.skincancerdetector.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_argumentsFragment"
+            app:destination="@id/argumentsFragment" />
+    </fragment>
+</navigation>

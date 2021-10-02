@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+    tools:context=".BodyPartFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_to_camera_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_arrow_back"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/selecione_a_regi_o_do_corpo"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:translationX="20dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="32dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/confirme_button"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.502">
+
+        <RadioButton
+            android:id="@+id/radio_Face"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Rosto"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Nose"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Nariz"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Lip"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Lábio"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Chest"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Peito"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Back"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Costas"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Forearm"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Antebraço"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Hand"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Mão"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/confirme_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <RadioButton
+            android:id="@+id/radio_Scalp"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Escalpo"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Ear"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Orelha"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Neck"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Pescoço"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Abdomen"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Abdômen"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Arm"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Braço"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Thigh"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Perna"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radio_Foot"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Pé"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirme_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="551dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/confirmar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

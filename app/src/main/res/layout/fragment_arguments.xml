@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+    tools:context=".ArgumentsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_to_camera_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_arrow_back"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Selecione as características:"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:translationX="20dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="32dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <Switch
+        android:id="@+id/itch_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="56dp"
+        android:switchPadding="10dp"
+        android:text="@string/itch"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/grew_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:switchPadding="10dp"
+        android:text="@string/grew"
+        android:textColor="#FFFFFF"
+        tools:ignore="UseSwitchCompatOrMaterialXml"
+        app:layout_constraintStart_toStartOf="@+id/itch_switch"
+        app:layout_constraintTop_toBottomOf="@+id/itch_switch" />
+
+    <Switch
+        android:id="@+id/changed_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:switchPadding="10dp"
+        android:text="@string/changed"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/grew_switch"
+        app:layout_constraintTop_toBottomOf="@+id/grew_switch"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/hurts_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:switchPadding="10dp"
+        android:text="@string/hurts"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/changed_switch"
+        app:layout_constraintTop_toBottomOf="@+id/changed_switch"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/bleeds_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:switchPadding="10dp"
+        android:text="@string/bleeds"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/hurts_switch"
+        app:layout_constraintTop_toBottomOf="@+id/hurts_switch"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/elevation_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:switchPadding="10dp"
+        android:text="@string/elevation"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/bleeds_switch"
+        app:layout_constraintTop_toBottomOf="@+id/bleeds_switch"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <!--<ImageView
+        android:id="@+id/image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        app:layout_constraintBottom_toTopOf="@+id/confirme_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:contentDescription="TODO" />-->
+
+    <Button
+        android:id="@+id/confirme_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/confirmar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elevation_switch"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
